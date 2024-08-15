@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primaryColor: rgb(71, 71, 250);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 200vh;
+}
+header {
+  display: flex;
+  height: 50px;
+  background-color: rgb(171, 210, 243);
+  color: gray;
+  font-weight: 200;
+  justify-content: space-between;
+  padding: 0 80px;
+  align-items: center;
+}
+.infos,
+.infos2 {
+  display: flex;
+  gap: 40px;
+  font-size: 12px;
+  align-items: center;
+}
+i {
+  color: var(--primaryColor);
+}
+.socialmedia {
+  display: flex;
+  gap: 5px;
+}
+.infos2 .socialmedia a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 50px;
+  height: 70px;
+  
+
+  top: -70px;
+  position: sticky;
+  background-color: white;
+  
+  align-items: center;
+  transition: all 0.5s ease;
+}
+nav .navs {
+  display: flex;
+  gap: 30px;
+  font-weight: 200;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  height: inherit;
+
+  align-items: center;
+}
+nav .navs button {
+  background-color: var(--primaryColor);
+  color: white;
+  height: 100%;
+  width: 150px;
+  border: none;
+}
+.dropdownContainer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdownContainer > p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropdown {
+  position: absolute;
+  background-color: white;
+  width: 170px;
+  text-align: center;
+  left: -50%;
+  top: 70%;
+
+  margin-top: 10px;
+
+  visibility: hidden;
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.162);
+  transform: translateY(50px);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.dropdownContainer p:hover + .dropdown,
+.dropdown:hover {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+.dropdown p {
+  padding: 10px;
+}
+.dropdown p:hover {
+  background-color: green;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  color: white;
+}
+
+section .description {
+  flex: 1;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+section .description h1 {
+  font-size: 2.5em;
+  padding: 0 10%;
+  font-weight: 800;
+}
+section .description .numbers {
+  display: flex;
+  gap: 50px;
+}
+
+section .description .numbers div {
+  padding-left: 10px;
+  border-left: 1px solid white;
+  line-height: 30px;
+}
+section .image {
+  flex: 1;
+  background-image: url(carousel-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
+section .image h1{
+  place-self: center;
+  font-size: 3rem;
+
+}
